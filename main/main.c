@@ -2,12 +2,15 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
+#include "bluetooth.h"
 
 static const char *TAG = "MAIN";
 
 void app_main(void)
 {
     ESP_LOGI(TAG, "Hello from ESP32-C3!");
+
+    bluetooth_init();
     
     int i = 0;
     while (1) {
